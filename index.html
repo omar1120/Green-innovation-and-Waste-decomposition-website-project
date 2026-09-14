@@ -1,35 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
-  <!-- Bootstrap 4 CSS -->
-  <link rel="stylesheet" href="https://jsdelivr.net" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- Your custom stylesheet -->
-  <link rel="stylesheet" href="src/css/style.css">
-  
-  <style>
-    .mainp { font-family: Cambria, Georgia, serif; font-size: 30px; text-align: center; }
-    #garbageimage { text-align: center; margin: 20px 0; }
-    #garbageimage img { max-width: 100%; height: auto; }
-    ul, ol { font-size: 20px; }
-    .BenefitsDamages { float: right; margin-left: 20px; margin-bottom: 15px; }
-    .BenefitsDamages img { max-width: 325px; height: auto; }
-    #WasteMeaning { border: 6px solid black; background-color: bisque; padding: 10px; border-radius: 20px; width: 80%; text-align: center; margin: 20px auto; }
-    .card-body::after { content: ""; display: block; clear: both; }
-    .footer-text { font-size: 30px; text-align: center; margin: 30px 0; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://jsdelivr.net" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Points to your neat custom stylesheet folder path -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <style>
+        .mainp {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 30px;
+            text-align: center;
+        }
+        #garbageimage {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #garbageimage img {
+            max-width: 100%;
+            height: auto;
+        }
+        ul, ol {
+            font-size: 20px;
+        }
+        .BenefitsDamages {
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .BenefitsDamages img {
+            max-width: 325px;
+            height: auto;
+        }
+        #WasteMeaning {
+            border: 6px solid black;
+            background-color: bisque;
+            padding: 10px;
+            border-radius: 20px;
+            width: 80%;
+            text-align: center;
+            margin: 20px auto;
+        }
+        /* Adjusted targeting to include Bootstrap 4's .card-body */
+        .accordion-item::after, .card-body::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .footer-text {
+            font-size: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        /* Custom styles to match the original style of your accordion header buttons */
+        .accordion .card-header button {
+            color: #000;
+            text-decoration: none;
+            width: 100%;
+            text-align: left;
+            padding: 0;
+        }
+        .accordion .card-header button:hover, 
+        .accordion .card-header button:focus {
+            text-decoration: none;
+            box-shadow: none;
+        }
+    </style>
 </head>
 <body>
-  <!-- Full content structure with corrected Bootstrap 4 accordion classes and scripts included as outlined in the source file -->
-  <div class="container my-4">
-    <div class="accordion" id="accordionExample">
-      <!-- Accordion items for Benefits and Damages included -->
+
+    <div id="headerpack">
+        <h1 id="mainheader"> Building a Sustainable Future Through Green Innovation </h1>
     </div>
-  </div>
-  <script src="https://jquery.com" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.net" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://jsdelivr.net" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <div id="nav-wrapper">
+        <a href="index.html" class="btn btn-light">Home Page</a>
+        <a href="src/pages/Workshops-&-Events.html" class="btn btn-light">Workshops &amp; Events</a>
+        <a href="src/pages/Learning-Hub.html" class="btn btn-light">Learning Hub</a>
+        <a href="src/pages/Eco-Impact-Tools.html" class="btn btn-light">Eco-Impact Tools</a>
+        <a href="src/pages/Self-Test-Form.html" class="btn btn-light">Self-Test Form</a>
+        <a href="src/pages/Innovation-Showcases.html" class="btn btn-light">Innovation Showcases</a>
+        <a href="src/pages/About-Us.html" class="btn btn-light">About Us</a>
+        <a href="src/pages/Contact-Us.html" class="btn btn-light">Contact Us</a>
+    </div>
+
+    <p class="mainp">
+        <i>
+            <b>Welcome to our platform, where technology meets sustainability. We aim to empower individuals and communities with knowledge, tools, and innovative solutions to create a greener, cleaner, and more sustainable world.</b>
+        </i>
+    </p>
+    <br>
+    
+    <p class="mainp">
+        <b>Waste Management</b>
+    </p>
+
+    <div id="garbageimage">
+        <img src="assets/garbage2.png" class="img-fluid" alt="Waste Management Illustration">
+    </div>
+
+    <p id="WasteMeaning" style="font-size: 30px;">
+        <b>Waste Management</b> is the process of collecting, transporting, processing, recycling, and disposing of waste materials in a safe and environmentally friendly way. It aims to reduce the negative impact of waste on human health and the environment.
+    </p>
+
+    <!-- FIXED: Bootstrap 4 Accordion Structure -->
+    <div class="accordion" id="accordionExample">
+        
+        <!-- Benefits Section -->
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <b>Benefits of Waste Management</b>
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="BenefitsDamages">
+                        <img src="assets/Benefits1.png" alt="Benefits of Waste Management">
+                    </div>
+                    <ol>
+                        <li>
+                            <strong>Protects the Environment</strong><br>
+                            Reduces pollution in air, water, and soil.
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Promotes Recycling</strong><br>
+                            Saves natural resources by reusing materials like plastic, paper, and metal.
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Economic Benefits</strong><br>
+                            Creates jobs and reduces costs of cleaning pollution.
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Improves Public Health</strong><br>
+                            Prevents the spread of diseases caused by waste.
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Reduces Climate Change</strong><br>
+                            Proper waste handling lowers harmful greenhouse gas emissions.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Damages Section -->
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <b>Damages of Ignoring Waste Management</b>
+                    </button>
+                </h2>
+            </div>
+            
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="BenefitsDamages">
+                        <img src="assets/Damages1.png" alt="Damages of Poor Waste Management">
+                    </div>
+                    <ol>
+                        <li>
+                            <strong>Environmental Pollution</strong><br>
+                            Waste accumulates in landfills and natural areas, harming ecosystems.
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Air Pollution</strong><br>
+                            Burning waste releases toxic gases that damage health.
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Water Contamination</strong><br>
+                            Waste pollutes rivers and oceans, killing marine life.
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Health Problems</strong><br>
+                            Causes diseases, infections, and respiratory issues.
+                        </li>
+                        <br>
+                        <li>
+                            <strong>Global Warming</strong><br>
+                            Landfills produce methane, a strong greenhouse gas.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <p class="footer-text">
+        Effective waste management is essential for a clean environment, healthy communities, and a sustainable future.
+    </p>
+
+    <!-- JavaScript dependencies for Bootstrap 4 -->
+    <script src="https://jquery.com" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://jsdelivr.net" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://jsdelivr.net" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
