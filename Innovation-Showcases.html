@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Showcase</title>
+    
+    <!-- FIXED: Active, reliable Bootstrap CSS delivery URL -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    
+    <!-- FIXED: Steps up out of pages/ to point to your main layout styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        #list1 {
+            background-color: #07790d;
+            border: 3px dotted #070f0f;
+            padding: 25px;
+            margin: 20px auto;
+            border-radius: 20px;
+            width: 95%;
+            color: #ffffff; /* FIXED: Changed to white for high contrast readability against green */
+            font-weight: 600;
+        }
+        
+        #cases {
+            min-height: 500px;
+            /* FIXED: Steps up two directories to look inside the assets folder for the background */
+            background-image: url('../../assets/img2.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.65); /* Enhances text readability over the image background */
+        }
+        
+        .w {
+            color: #ffc107; /* FIXED: Warm gold yellow text for high contrast readability over background dark overlay */
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        
+        .q {
+            font-weight: normal;
+            color: #ffffff; /* FIXED: Set list text to crisp white for solid accessibility metrics */
+            font-size: 16px;
+        }
+        
+        #cases hr {
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Cleaned list item styling targets */
+        ul li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FIXED: Restored identical master layout header structure -->
+    <div id="headerpack">
+        <h1 id="mainheader">
+            Building a Sustainable Future Through Green Innovation
+        </h1>
+    </div>
+    
+    <!-- Navigation menu works seamlessly for inner folders -->
+    <div id="nav-wrapper">
+        <a href="../../index.html" class="btn btn-light">Home Page</a>
+        <a href="Workshops-&-Events.html" class="btn btn-light">Workshops &amp; Events</a>
+        <a href="Learning-Hub.html" class="btn btn-light">Learning Hub</a>
+        <a href="Eco-Impact-Tools.html" class="btn btn-light">Eco-Impact Tools</a>
+        <a href="Self-Test-Form.html" class="btn btn-light">Self-Test Form</a>
+        <a href="Innovation-Showcases.html" class="btn btn-light">Innovation Showcases</a>
+        <a href="About-Us.html" class="btn btn-light">About Us</a>
+        <a href="Contact-Us.html" class="btn btn-light">Contact Us</a>
+    </div>
+
+    <!-- Main Page Content Structure Wrapper -->
+    <div class="container main-content">
+        <p class="fs-5 mt-4">
+            The global waste crisis is no longer a challenge that can be solved with manual labor or traditional 
+            logistics; it is a complex data problem requiring a revolutionary technological response. The Innovation 
+            Showcase highlights the frontier of this transformation, where high-performance cloud architecture, 
+            autonomous robotics, and predictive AI converge to redefine the material lifecycle. Here, we move beyond 
+            the 'Smart' baseline to explore the disruptive and systemic breakthroughs that are turning the ambitious 
+            goal of a circular economy into a measurable, scalable reality.
+        </p>
+        
+        <p class="text-center font-weight-bold fs-5 mt-4 text-success">
+            Here are the three main levels of innovation in waste management on the international level:
+        </p>
+        
+        <div id="list1" class="shadow-sm fs-5">
+            <strong>Incremental:</strong> Small, continuous improvements made to existing products, services, or processes. It does not change the core system but makes it more efficient, cheaper, or faster.
+            <hr class="border-light">
+            <strong>Disruptive:</strong> Innovation that introduces a new technology or business model that displaces established market leaders and methods. It significantly changes how a task is performed.
+            <hr class="border-light">
+            <strong>Systemic:</strong> A fundamental shift that reconfigures the entire ecosystem. It involves changes in technology, policy, and social behavior to eliminate the root cause of a problem (like waste) entirely.
+        </div>
+        
+        <p class="fs-4 text-dark mt-5">
+            There are many countries who invested in waste management and here are some of those who stand out the most:
+        </p>
+        
+        <!-- Case Studies Panel -->
+        <div id="cases" class="shadow">
+            
+            <!-- Case Study 1 -->
+            <p class="w">
+                Case Study 1: Singapore (The Systemic Vision)
+            </p>
+            <p class="text-white-50">
+                Singapore faces a unique challenge: limited land space. They have moved beyond simple collection toward a "Zero Waste Nation" strategy that focuses on systemic resource recovery.
+            </p>
+            <ul>
+                <li class="q"><strong>The Innovation:</strong> The Tuas Nexus is the world's first integrated facility that treats both used water and food waste in one location.</li>
+                <li class="q"><strong>The Tech:</strong> By co-digesting food waste with used water sludge, the city-state maximizes biogas production, which is then used to power the facility itself.</li>
+                <li class="q"><strong>The Result:</strong> A self-sustaining energy loop that reduces the carbon footprint of waste processing while minimizing landfill use.</li>
+            </ul>
+            
+            <hr>
+            
+            <!-- Case Study 2 -->
+            <p class="w">
+                Case Study 2: Zurich, Switzerland (The Incremental & Disruptive Blend)
+            </p>
+            <p class="text-white-50">
+                Zurich is a global leader in operational efficiency, using a "pay-as-you-throw" model supported by a highly digitized infrastructure.
+            </p>
+            <ul>
+                <li class="q"><strong>The Innovation:</strong> A city-wide network of underground vacuum waste systems and smart sensors.</li>
+                <li class="q"><strong>The Tech:</strong> Instead of traditional garbage trucks driving through narrow streets, waste is sucked through a pneumatic tube system to central collection points. For areas still using bins, IoT level sensors optimize truck routes in real-time.</li>
+                <li class="q"><strong>The Result:</strong> A massive reduction in urban traffic, noise pollution, and CO2 emissions, with one of the highest recycling rates in the world (over 50%).</li>
+            </ul>
+            
+            <hr>
+            
+            <!-- Case Study 3 -->
+            <p class="w">
+                Case Study 3: Songdo, South Korea (The "Born Smart" City)
+            </p>
+            <p class="text-white-50">
+                Songdo was designed from the ground up as a smart city, making it a perfect example of disruptive innovation integrated into urban planning.
+            </p>
+            <ul>
+                <li class="q"><strong>The Innovation:</strong> A "Third Pipe" system for waste.</li>
+                <li class="q"><strong>The Tech:</strong> Every apartment and office building is connected to a centralized automated waste collection system. Residents dispose of waste in specialized chutes that use RFID technology to track disposal habits and charge fees accordingly.</li>
+                <li class="q"><strong>The Result:</strong> The city has virtually no garbage trucks on the streets. Waste is transported via underground pipes directly to a processing center where it is automatically sorted or converted into energy.</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- FIXED: Active Bootstrap JS Bundle URL -->
+    <script src="https://jsdelivr.net"></script>
+</body>
+</html>
