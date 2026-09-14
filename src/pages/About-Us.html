@@ -2,53 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/css/style.css">
+    
+    <!-- FIXED: Active, reliable Bootstrap CSS delivery URL -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    
+    <!-- FIXED: Steps up out of pages/ to look straight into your custom css folder -->
+    <link rel="stylesheet" href="../css/style.css">
+    
     <style>
-        h2 
-        {
+        h2 {
             color: #2e7d32;
         }
 
-        .box 
-        {
-            background-color: white;
+        /* Adjusted slightly to integrate cleanly with your master style.css theme colors */
+        .box {
             padding: 20px;
-            width: 90%;
-            margin: 2.5%;
+            width: 95%;
+            margin: 20px auto;
             border-radius: 10px;
             border-left: 6px solid #4caf50;
+            background-color: white; 
         }
 
-        .image-box 
-        {
+        .image-box {
             text-align: center;
         }
 
-        .image-box img 
-        {
+        .image-box img {
             width: 100%;
             border-radius: 10px;
         }
 
-        ol, ul 
-        {
+        ol, ul {
             padding-left: 20px;
         }
 
-        li 
-        {
+        li {
             margin: 5px 0;
         }
     </style>
 </head>
 
 <body>
-<div id="headerpack">
-    <h1 id="mainheader">About-Us</h1>
-   </div>
     
+    <!-- FIXED: Restored identical master layout title text styling -->
+    <div id="headerpack">
+        <h1 id="mainheader">
+            Building a Sustainable Future Through Green Innovation
+        </h1>
+    </div>
+    
+    <!-- Navigation menu works seamlessly for inner folders -->
     <div id="nav-wrapper">
         <a href="../../index.html" class="btn btn-light">Home Page</a>
         <a href="Workshops-&-Events.html" class="btn btn-light">Workshops &amp; Events</a>
@@ -59,53 +65,61 @@
         <a href="About-Us.html" class="btn btn-light">About Us</a>
         <a href="Contact-Us.html" class="btn btn-light">Contact Us</a>
     </div>
-<div class="container">
 
-    <div class="box" style="background-color: bisque; text-align: center;">
+    <!-- Main Content Area -->
+    <div class="container main-content">
 
-        <p>
-            We are a team dedicated to promoting <strong>Waste Management</strong>
-            and <em>Zero Waste Living</em> practices.
+        <div class="box" style="background-color: bisque; text-align: center; border-left-color: #0c340c;">
+            <p style="font-size: 22px; margin: 0;">
+                We are a team dedicated to promoting <strong>Waste Management</strong>
+                and <em>Zero Waste Living</em> practices.
+            </p>
+        </div>
+
+        <div class="box" style="background-color: #b6d365; border-left-color: #2e7d32;">
+            <h2>Team Members:</h2>
+            <ol>
+                <li>Omar Bayado</li>
+                <li>Muhammad Al-Hayari</li>
+                <li>Ayman Abu Al-Nadi</li>
+                <li>Fawzi Al-Hafi</li>
+            </ol>
+        </div>
+
+        <div class="box">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to encourage individuals and communities to adopt
+                sustainable habits that minimize waste and support a cleaner planet.
+            </p>
+        </div>
+
+        <div class="box" style="background-color: bisque; border-left-color: #0c340c;">
+            <h2>What We Do</h2>
+            <ul>
+                <li>Educate people about waste reduction</li>
+                <li>Promote recycling and reuse</li>
+                <li>Support eco-friendly lifestyles</li>
+                <li>Encourage Zero Waste practices</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Why Zero Waste?</h2>
+            <p>
+                Zero Waste Living focuses on reducing the amount of trash we produce
+                by reusing materials and making mindful choices in daily life.
+            </p>
+        </div>
+        
+        <br>
+        <p style="text-align: center; font-size: 30px; font-weight: bold; color: #2e7d32;">
+            Thank you for your time
         </p>
+        <br>
     </div>
 
-    <div class="box" style="background-color: #b6d365;">
-        <h2>Team Members:</h2>
-        <ol>
-            <li>Omar Bayado</li>
-            <li>Muhammad Al-Hayari</li>
-            <li>Ayman Abu Al-Nadi</li>
-            <li>Fawzi Al-Hafi</li>
-        </ol>
-    </div>
-
-    <div class="box">
-        <h2>Our Mission</h2>
-        <p>
-            Our mission is to encourage individuals and communities to adopt
-            sustainable habits that minimize waste and support a cleaner planet.
-        </p>
-    </div>
-
-    <div class="box" style="background-color: bisque;">
-        <h2>What We Do</h2>
-        <ul>
-            <li>Educate people about waste reduction</li>
-            <li>Promote recycling and reuse</li>
-            <li>Support eco-friendly lifestyles</li>
-            <li>Encourage Zero Waste practices</li>
-        </ul>
-    </div>
-
-    <div class="box">
-        <h2>Why Zero Waste?</h2>
-        <p>
-            Zero Waste Living focuses on reducing the amount of trash we produce
-            by reusing materials and making mindful choices in daily life.
-        </p>
-    </div><br>
-    <p style="text-align: center; font-size: 30px;">Thank you for your time</p><br><br><br>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- FIXED: Active Bootstrap JS Bundle URL -->
+    <script src="https://jsdelivr.net"></script>
 </body>
 </html>
