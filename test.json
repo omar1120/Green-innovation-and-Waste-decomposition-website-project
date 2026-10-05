@@ -1,1 +1,355 @@
+<script>
+        let name;
+        let email;
+        let age;
+        let city;
+        let occupation;
+        let household_size;
+        let wasteKg;
+        let wasteType;
+        let selectedWaste;
+        let waste;
+        let disposal;            
+        let separation;
+        let separationValue;
+        let participation;
+        let selectedParticipation;
+        let awareness;
+        let plasticBags;
+        let barrier;
+        let barrierValue;
+        let monthlySpend;
+        
 
+        function validate_to_calculate()
+        {
+            name = document.getElementById("fullname").value.trim();
+            email = document.getElementById("email").value;
+            age = document.getElementById("age").value;
+            city = document.getElementById("city").value;
+            occupation = document.getElementById("occupation").value;
+            household_size = document.getElementById("household-size").value;
+            wasteKg = document.getElementById("waste-kg").value;
+            wasteType = document.getElementsByClassName("waste-type");
+            waste = document.getElementById("waste-kg").value;
+            disposal = document.getElementById("disposal").value;            
+            separation = document.getElementsByName("separation");
+            participation = document.getElementsByClassName("participation");
+            awareness = document.getElementById("awareness").value;
+            barrier = document.getElementsByName("barrier");
+            monthlySpend = document.getElementById("monthly-spend").value;
+
+           selectedWaste = "";
+           
+           for(let i = 0; i < wasteType.length; i++)
+           {
+                if(wasteType[i].checked)
+                {
+                    selectedWaste += wasteType[i].value + " ";
+                }
+            }
+
+            selectedParticipation = "";
+
+            for(let i = 0; i < participation.length; i++)
+            {
+                if(participation[i].checked)
+                {
+                    selectedParticipation += participation[i].value + " ";
+                }
+            }
+
+            separationValue = "";
+
+            for(let i = 0; i < separation.length; i++)
+            {
+                if(separation[i].checked)
+                {
+                    separationValue = separation[i].value;
+                    break;
+                }
+            }
+
+            barrierValue = "";
+
+            for(let i = 0; i < barrier.length; i++)
+            {
+                if(barrier[i].checked)
+                {
+                    barrierValue = barrier[i].value;
+                    break;
+                }
+            }
+
+            let hasError = false;
+
+            document.getElementById("err-fullname").innerHTML = "";
+            document.getElementById("err-email").innerHTML = "";
+            document.getElementById("err-age").innerHTML = "";
+            document.getElementById("err-city").innerHTML = "";
+            document.getElementById("err-occupation").innerHTML = "";
+            document.getElementById("err-household-size").innerHTML = "";
+            document.getElementById("err-waste-kg").innerHTML = "";
+            document.getElementById("err-waste-type").innerHTML = "";
+            document.getElementById("err-disposal").innerHTML = "";
+            document.getElementById("err-separation").innerHTML = "";
+            document.getElementById("err-initiative").innerHTML = "";
+            document.getElementById("err-awareness").innerHTML = "";
+            document.getElementById("err-plastic-bags").innerHTML = "";
+            document.getElementById("err-barrier").innerHTML = "";
+            document.getElementById("err-monthly-spend").innerHTML = "";
+
+            if (name.length < 3 || name == "")
+            {
+                document.getElementById("err-fullname").innerHTML = "Full-Name must be 3 characters or more.";
+                hasError = true;
+            }
+            if(email == "" || !email.includes("@") || !email.includes("."))
+            {
+                document.getElementById("err-email").innerHTML = "Enter a valid email.";
+                hasError = true;
+            }
+
+            if (age == "" || age < 15 || age > 100)
+            {
+                document.getElementById("err-age").innerHTML = "Age must be between 15 and 100.";
+                hasError = true;
+            }
+
+            if (city.trim() == "")
+            {
+                document.getElementById("err-city").innerHTML = "City is required.";
+                hasError = true;
+            }
+
+            if (occupation == "")
+            {
+                document.getElementById("err-occupation").innerHTML = "Select occupation.";
+                hasError = true;
+            }
+
+            if (household_size == "" || household_size < 1)
+            {
+                document.getElementById("err-household-size").innerHTML = "Must be at least 1.";
+                hasError = true;
+            }
+
+            if (wasteKg == "" || wasteKg < 0)
+            {
+                document.getElementById("err-waste-kg").innerHTML = "Enter valid waste amount.";
+                hasError = true;
+            }
+
+            let wasteBoxes = document.getElementsByClassName("waste-type");
+            let wasteCount = 0;
+
+            for(let i = 0; i < wasteBoxes.length; i++)
+            {
+                if(wasteBoxes[i].checked)
+                    wasteCount++;
+            }
+
+            if(wasteCount < 2)
+            {
+                document.getElementById("err-waste-type").innerHTML = "Select at least 2 types.";
+                hasError = true;
+            }
+
+            if(disposal == "")
+            {
+                document.getElementById("err-disposal").innerHTML = "Select disposal method.";
+                hasError = true;
+            }
+
+            let separationSelected = false;
+            let separationRadios = document.getElementsByName("separation");
+
+            for(let i = 0; i < separationRadios.length; i++)
+            {
+                if(separationRadios[i].checked)
+                    separationSelected = true;
+            }
+
+            if(!separationSelected)
+            {
+                document.getElementById("err-separation").innerHTML = "Choose an option.";
+                hasError = true;
+            }
+
+            let participationBoxes = document.getElementsByClassName("participation");
+            let participationCount = 0;
+
+            for(let i = 0; i < participationBoxes.length; i++)
+            {
+                if(participationBoxes[i].checked)
+                    participationCount++;
+            }
+
+            if(participationCount == 0)
+            {
+                document.getElementById("err-initiative").innerHTML = "Select at least one initiative.";
+                hasError = true;
+            }
+
+            if(awareness == "")
+            {
+                document.getElementById("err-awareness").innerHTML = "Select awareness level.";
+                hasError = true;
+            }
+
+            plasticBags = document.getElementById("plastic-bags").value;
+
+            if(plasticBags == "" || plasticBags < 0)
+            {
+                document.getElementById("err-plastic-bags").innerHTML = "Enter a valid number.";
+                hasError = true;
+            }
+
+            let barrierSelected = false;
+            let barriers = document.getElementsByName("barrier");
+
+            for(let i = 0; i < barriers.length; i++)
+            {
+                if(barriers[i].checked)
+                    barrierSelected = true;
+            }
+
+            if(!barrierSelected)
+            {
+                document.getElementById("err-barrier").innerHTML = "Choose a barrier.";
+                hasError = true;
+            }
+
+            if(monthlySpend == "" || monthlySpend < 0)
+            {
+                document.getElementById("err-monthly-spend").innerHTML = "Enter valid amount.";
+                hasError = true;
+            }
+
+            if(hasError)
+            {
+                return false;
+            }
+
+            let score = 0;
+
+            // 1
+            if(wasteKg <= 10)
+                score++;
+
+            // 2
+            if(disposal == "compost" || disposal == "recycling_centre")
+                score++;
+
+            // 3
+            for(let i=0;i<separationRadios.length;i++)
+            {
+                if(separationRadios[i].checked &&
+                separationRadios[i].value == "yes")
+                    score++;
+            }
+
+            // 4
+            if(participationCount >= 1)
+                score++;
+
+            // 5
+            if(awareness >= 4)
+                score++;
+
+            // 6
+            if(plasticBags <= 5)
+                score++;
+
+            // 7
+            if(monthlySpend >= 10)
+                score++;
+
+            // 8
+            if(wasteCount >= 3)
+                score++;
+
+            // 9
+            if(household_size <= 5)
+                score++;
+
+            // 10
+            if(age >= 18)
+                score++;
+
+            // 11
+            if(occupation == "student")
+                score++;
+
+            // 12
+            if(participationCount >= 2)
+                score++;
+
+            // 13
+            if(disposal != "burn")
+                score++;
+
+            // 14
+            if(awareness == 5)
+                score++;
+
+            // 15
+            if(plasticBags <= 2)
+                score++;
+            calculate(score);
+            return false;
+        }
+
+        function calculate(score)
+        {
+            let result = "";
+
+            if(score <= 3)
+                result = "Environmental Score: " + score + "/15\nHopeless 😢";
+
+            else if(score <= 6)
+                result = "Environmental Score: " + score + "/15\nNeeds Improvement ⚠️";
+
+            else if(score <= 9)
+                result = "Environmental Score: " + score + "/15\nGood 👍";
+
+            else if(score <= 12)
+                result = "Environmental Score: " + score + "/15\nVery Good 🌱";
+
+            else
+                result = "Environmental Score: " + score + "/15\nExcellent Eco Citizen 🌍";
+
+            document.getElementById("report").value = result;
+            document.getElementById("report").value += "\n Name is: "+name+"\nEmail is: "+email+"\nAge is: "+age+"\nCity is: "
+            +city+"\nOccupation is: "+occupation+"\nHousehold Size is:"+household_size+"\nWeekly Waste Produced: "+wasteKg +" Kg"+
+            "\nTypes of Waste You Produce: "+selectedWaste+"\nDisposal Method is: "+disposal+"\nseparate Of Waste is: "+separationValue+
+            "\nIParticipation in Initiatives is:"+selectedParticipation+"\nAwarness Level is: "+awareness+"\nNumber Of Plastic Bags Used is: "
+            +plasticBags+"\nBiggest Barrier is:"+barrierValue+"\nMonthly Spent Money is: "+monthlySpend + " JOD";
+        }
+
+        function clearErrors()
+        {
+            document.getElementById("err-fullname").innerHTML = "";
+            document.getElementById("err-email").innerHTML = "";
+            document.getElementById("err-age").innerHTML = "";
+            document.getElementById("err-city").innerHTML = "";
+            document.getElementById("err-occupation").innerHTML = "";
+            document.getElementById("err-household-size").innerHTML = "";
+            document.getElementById("err-waste-kg").innerHTML = "";
+            document.getElementById("err-waste-type").innerHTML = "";
+            document.getElementById("err-disposal").innerHTML = "";
+            document.getElementById("err-separation").innerHTML = "";
+            document.getElementById("err-initiative").innerHTML = "";
+            document.getElementById("err-awareness").innerHTML = "";
+            document.getElementById("err-plastic-bags").innerHTML = "";
+            document.getElementById("err-barrier").innerHTML = "";
+            document.getElementById("err-monthly-spend").innerHTML = "";
+
+            document.getElementById("report").value = "";
+        }
+
+        let date = new Date();
+        document.getElementById("date").innerHTML += date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear()+
+        ", "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+
+    </script>
